@@ -1,0 +1,31 @@
+#product {
+    position: relative;
+    .card_overlay {
+        position: relative;
+        .card {
+            border: 0px;
+            .card-layout {
+                .card-body {
+                    h2,
+                    h3 {
+                        padding: 5px;
+                        margin: auto;
+                        font-weight: bold;
+                    }
+                }
+                .card-desc {
+                    display: none;
+                    font-size: 25px;
+                }
+                button {
+                    transform: translate(100%, 0);
+                }
+            }
+            &:hover {
+                .card-desc {
+                    display: block;
+                }
+            }
+        }
+    }
+}

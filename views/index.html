@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài tập Captone 2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&family=Tiro+Tamil&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- SCSS -->
+    <link rel="stylesheet" href="../sass/main.scss">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header_content d-flex align-items-center">
+                <div class="header_logo">
+                    <a href="">
+                        <img class="img-fluid" width="150" src="../img/happy-delivery-man-logo_56104-687.webp" alt="">
+                    </a>
+                </div>
+                <div class="header_cart ml-auto">
+                    <button type="button" name="" id="btnGioHang" class="btn" data-toggle="modal" data-target="#myModal">
+                        <i class="fa-solid fa-cart-shopping "></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Select -->
+    <section id="select">
+        <div class="select_product pt-4 pb-4 m-auto d-flex align-items-center justify-content-center">
+            <div class="form-group mb-0">
+                <select class="form-control" name="" id="selectProduct">
+                    <option value="Chọn sản phẩm">Chọn sản phẩm</option>
+                    <option value="iphone">Iphone</option>
+                    <option value="samsung">Samsung</option>
+                </select>
+            </div>
+            <div class="findProduct ml-4">
+                <button type="submit" class="timKiemProduct btn btn-dark">Tìm kiếm</button>
+            </div>
+        </div>
+    </section>
+    <!-- Sản phẩm -->
+    <section id="product">
+        <div class="container">
+            <div class="product_content">
+                <div class="row">
+                    <div class="card_overlay col-12 col-xs-12 col-md-6 col-lg-4">
+                        <div class="card container p-0">
+                            <div class="card-layout">
+                                <img class="card-img-top img-fluid w-100" src="../img/iphone-x-64gb-hh-600x600.jpg" alt=" ">
+                                <div class="card-body d-flex text-center">
+                                    <h2 class="card-title col-8">Iphone 13</h2>
+                                    <h3 class="card-price text-danger">20.000$</h3>
+                                </div>
+                                <div class="card-info container">
+                                    <div class="card-desc">
+                                        <p class="frontCamera m-0">Cam trước:32 MP</p>
+                                        <p class="backCamera m-0">Cam sau:Chính 64 MP & Phụ 12 MP, 5 MP, 5 MP</p>
+                                        <p class="describe m-0">Thiết kế đột phá, màn hình tuyệt đỉnh</p>
+                                    </div>
+                                    <button type="button" class="btn btn-danger">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Table -->
+    <section id="table">
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Giá</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableProduct"></tbody>
+                        </table>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer m-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+</body>
+<script src="../models/index.js "></script>
+
+</html>

@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  font-family: 'Tiro Tamil', serif;
+}
+
+header {
+  z-index: 999;
+  width: 100%;
+}
+
+header .header_cart {
+  align-items: center;
+}
+
+header .header_cart i {
+  font-size: 50px;
+}
+
+#product {
+  position: relative;
+}
+
+#product .card_overlay {
+  position: relative;
+}
+
+#product .card_overlay .card {
+  border: 0px;
+}
+
+#product .card_overlay .card .card-layout .card-body h2,
+#product .card_overlay .card .card-layout .card-body h3 {
+  padding: 5px;
+  margin: auto;
+  font-weight: bold;
+}
+
+#product .card_overlay .card .card-layout .card-desc {
+  display: none;
+  font-size: 25px;
+}
+
+#product .card_overlay .card .card-layout button {
+  transform: translate(100%, 0);
+}
+
+#product .card_overlay .card:hover .card-desc {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */
