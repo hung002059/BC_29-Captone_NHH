@@ -31,23 +31,28 @@ header .header_cart i {
   border: 0px;
 }
 
-#product .card_overlay .card .card-layout .card-body h2,
-#product .card_overlay .card .card-layout .card-body h3 {
-  padding: 5px;
-  margin: auto;
-  font-weight: bold;
+#product .card_overlay .card .card-layout .card-info {
+  display: none;
+}
+
+#product .card_overlay .card .card-layout:hover .card-info {
+  display: block;
+}
+
+#product .card_overlay .card .card-layout .card-body {
+  padding: 10px;
+}
+
+#product .card_overlay .card .card-layout .card-body span {
+  font-size: 1rem;
+  font-weight: 800;
 }
 
 #product .card_overlay .card .card-layout .card-desc {
-  display: none;
-  font-size: 25px;
+  font-size: 15px;
 }
 
-#product .card_overlay .card .card-layout button {
-  transform: translate(100%, 0);
-}
-
-#product .card_overlay .card:hover .card-desc {
-  display: block;
+#product .card_overlay .card .card-layout .card-desc p span:nth-child(1) {
+  color: red;
 }
 /*# sourceMappingURL=main.css.map */
