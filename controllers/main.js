@@ -108,15 +108,21 @@ const themProduct = (id) => {
     .catch((error) => console.error(error));
 };
 const renderTable = () => {
-  const product = tableList.DSGH.reduce((total, item, idx) => {
+  const product = tableList.DSGH.reduce((total, item, idx, sp) => {
     total += `
     <tr>
       <td>${idx + 1}</td>
       <td>${item.name}</td>
       <td><img class="img-fluid w-50%" src="${item.img}" /></td>
       <td>${item.price}</td>
+      <td>
+      <i class="fa-solid fa-circle-minus" onchange="giamSL()"></i>
+      <button type="text" value="${idx}"></button>
+      <i class="fa-solid fa-circle-plus" onchange="tangSL()"></i>
+      </td>
     </tr>
     `;
+    console.log(sp);
     return total;
   }, "");
   getId("tableProduct").innerHTML = product;
