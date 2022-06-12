@@ -3,7 +3,7 @@ function getId(id) {
 }
 const service = new Service();
 const productList = new DanhSachSanPham();
-const sanPham = new SanPham();
+// const sanPham = new SanPham();
 const getProduct = () => {
   service
     .getListProductAPI()
@@ -14,10 +14,32 @@ const getProduct = () => {
     .catch((error) => console.error(error));
 };
 getProduct();
-const mappingData = () => {
-  console.log(productList.DSSP);
+const mappingAPI = (productList) => {
+  productList.map((ele) => {
+    const {
+      id,
+      name,
+      price,
+      screen,
+      backCamera,
+      frontCamera,
+      img,
+      desc,
+      type,
+    } = ele;
+    return new SanPham(
+      id,
+      name,
+      price,
+      screen,
+      backCamera,
+      frontCamera,
+      img,
+      desc,
+      type
+    );
+  });
 };
-mappingData();
 const renderProduct = () => {
   const product = productList.filterProduct().reduce((total, ele, idx) => {
     total += `
@@ -74,13 +96,28 @@ getId("selectProduct").onchange = () => {
   renderProduct();
 };
 const tableList = new GioHang();
+const mappingTable = () => {};
 const themProduct = (id) => {
   service
     .getProductById(id)
     .then((result) => {
       tableList.addToCart(result.data);
-      // console.log(result.data);
-      console.log(tableList.DSGH);
+      console.log(result.data);
+      renderTable();
     })
     .catch((error) => console.error(error));
+};
+const renderTable = () => {
+  const product = tableList.DSGH.reduce((total, item, idx) => {
+    total += `
+    <tr>
+      <td>${idx + 1}</td>
+      <td>${item.name}</td>
+      <td><img class="img-fluid w-50%" src="${item.img}" /></td>
+      <td>${item.price}</td>
+    </tr>
+    `;
+    return total;
+  }, "");
+  getId("tableProduct").innerHTML = product;
 };
