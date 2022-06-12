@@ -102,8 +102,8 @@ const themProduct = (id) => {
     .getProductById(id)
     .then((result) => {
       tableList.addToCart(result.data);
-      console.log(result.data);
       renderTable();
+      console.log(tableList.DSGH);
     })
     .catch((error) => console.error(error));
 };
@@ -115,14 +115,19 @@ const renderTable = () => {
       <td>${item.name}</td>
       <td><img class="img-fluid w-50%" src="${item.img}" /></td>
       <td>${item.price}</td>
-      <td>
+      <td class="d-inline">
       <i class="fa-solid fa-circle-minus" onchange="giamSL()"></i>
-      <button type="text" value="${idx}"></button>
+      <input
+        name=""
+        id="soLuongSP"
+        class="btn"
+        type="button"
+        value="1"
+      />
       <i class="fa-solid fa-circle-plus" onchange="tangSL()"></i>
       </td>
     </tr>
     `;
-    console.log(sp);
     return total;
   }, "");
   getId("tableProduct").innerHTML = product;
